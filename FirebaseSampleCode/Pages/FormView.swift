@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FormView.swift
 //  FirebaseSampleCode
 //
 //  Created by Shusuke Ota on 2020/5/24.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FormView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("ATM情報投稿ページ")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FormView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FormView()
     }
 }

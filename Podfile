@@ -7,5 +7,6 @@ target 'FirebaseSampleCode' do
 
   # Pods for FirebaseSampleCode
 	pod 'Firebase/Analytics'
+	pod 'Firebase/Firestore'
 
 end

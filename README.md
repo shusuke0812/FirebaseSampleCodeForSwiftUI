@@ -3,7 +3,7 @@ FirebaseとSwiftUIで作るATM検索アプリ
 　
 ## 開発環境
 - Xcode version 11.3.1
-- pod version
+- pod version 1.9.1
 - MacOS Catalina version 10.15.4
 
 ## 概要
@@ -16,7 +16,7 @@ FirebaseとSwiftUIで作るATM検索アプリ
 ## 参考文献
 - 佐藤剛士、１人でアプリを作る人を支えるSwiftUI開発レシピ、Parsonal Factory、2020
 　
-## Author／著者
+## 著者
 [@shusuke0812](https://github.com/shusuke0812)
 
 

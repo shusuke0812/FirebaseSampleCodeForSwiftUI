@@ -15,8 +15,8 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
-                Text("card UI")
-                // CardView()
+                // Text("card UI")
+                CardView()
             }
             .padding()
             .navigationBarTitle("", displayMode: .inline)

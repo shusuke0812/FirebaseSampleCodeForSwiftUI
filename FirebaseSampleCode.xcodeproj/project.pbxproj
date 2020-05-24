@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		9C4E8E5E247A581C0022BB32 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E5D247A581C0022BB32 /* FormView.swift */; };
 		9C4E8E60247A5BE20022BB32 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E5F247A5BE20022BB32 /* SafariView.swift */; };
 		9C4E8E62247A6F040022BB32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */; };
+		9C4E8E65247A974B0022BB32 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E64247A974B0022BB32 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		9C4E8E5D247A581C0022BB32 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		9C4E8E5F247A5BE20022BB32 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C4E8E64247A974B0022BB32 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E1CA6D2A7E4E31B5B31A0B47 /* Pods-FirebaseSampleCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleCode.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseSampleCode/Pods-FirebaseSampleCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +62,6 @@
 				E1CA6D2A7E4E31B5B31A0B47 /* Pods-FirebaseSampleCode.debug.xcconfig */,
 				81ED71CE838F0640B67B6AAE /* Pods-FirebaseSampleCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +97,7 @@
 				9C4E8E58247A3DF00022BB32 /* Pages */,
 				9C4E8E55247A33840022BB32 /* Components */,
 				9C3C53812479FB7C00361581 /* AppDelegate.swift */,
+				9C4E8E63247A97330022BB32 /* Models */,
 				9C3C53832479FB7C00361581 /* SceneDelegate.swift */,
 				9C3C53872479FB8200361581 /* Assets.xcassets */,
 				9C3C538C2479FB8200361581 /* LaunchScreen.storyboard */,
@@ -132,6 +134,14 @@
 				9C4E8E5D247A581C0022BB32 /* FormView.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		9C4E8E63247A97330022BB32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E8E64247A974B0022BB32 /* ViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C3C53822479FB7C00361581 /* AppDelegate.swift in Sources */,
+				9C4E8E65247A974B0022BB32 /* ViewModel.swift in Sources */,
 				9C3C53842479FB7C00361581 /* SceneDelegate.swift in Sources */,
 				9C4E8E5E247A581C0022BB32 /* FormView.swift in Sources */,
 				9C4E8E5A247A573B0022BB32 /* MapView.swift in Sources */,

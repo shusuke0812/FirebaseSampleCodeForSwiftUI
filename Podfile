@@ -8,5 +8,6 @@ target 'FirebaseSampleCode' do
   # Pods for FirebaseSampleCode
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Firestore'
+	pod 'SDWebImageSwiftUI'
 
 end

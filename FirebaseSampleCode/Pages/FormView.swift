@@ -14,11 +14,15 @@ struct FormView: View {
     @State private var isPresented: Bool = false
     
     @State private var atmIndex = 0
-    
+    @State private var textAtmName = ""
+    @State private var textAtmAddress = ""
     var atms = ["ゆうちょ銀行", "みずほ銀行", "三菱東京UFJ", "三井住友銀行"]
     
     var body: some View {
         VStack {
+            Text("ATMを登録する")
+                .font(.headline)
+                .fontWeight(.bold)
             NavigationView {
                 Form {
                     Section {
@@ -30,7 +34,26 @@ struct FormView: View {
                     }
                 }
             }
-            Spacer()
+            HStack {
+                Text("名前")
+                TextField("ATMの支店名を入力", text: $textAtmName, onCommit: {
+                    // 編集完了後に呼ばれるクロージャー
+                    print("test")
+                })
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.asciiCapable)
+            }
+            .padding()
+            HStack {
+                Text("住所")
+                TextField("ATMの住所を入力", text: $textAtmAddress, onCommit: {
+                    // 編集完了後に呼ばれるクロージャー
+                    print("test")
+                })
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.asciiCapable)
+            }
+            .padding()
             Button(action: {
                 // print("ボタンがタップされました")
                 self.isPresented.toggle()

@@ -54,6 +54,32 @@ struct FormView: View {
                     .keyboardType(.asciiCapable)
             }
             .padding()
+            Spacer()
+            VStack {
+                Spacer()
+                Text("画像がありません")
+                    .foregroundColor(.gray)
+                    .frame(width: 200, height: 200)
+                    .overlay(Rectangle().stroke(Color.gray, lineWidth: 0.5))
+                    .padding()
+                Spacer()
+            }
+            
+            
+            Button(action: {
+                
+            }){
+                VStack {
+                    Image(systemName: "camera")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                    Text("画像登録")
+                }
+                .frame(width: 80, height: 60)
+                .padding(.bottom, 30)
+            }
+            Spacer()
             Button(action: {
                 // print("ボタンがタップされました")
                 self.isPresented.toggle()

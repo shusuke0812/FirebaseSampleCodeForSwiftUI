@@ -34,16 +34,6 @@ struct CardView: View {
                                     .clipShape(Circle())
                                     .overlay(Circle().stroke(Color.gray, lineWidth: 2))
                                     .shadow(color: .gray, radius: 1, x:0, y:0)
-                                /*
-                                Image(uiImage: i.iconImage)
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 60, height: 60)
-                                    .clipShape(Circle())
-                                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                                    .shadow(color: .gray, radius: 1, x:0, y:0)
-                                */
                                 VStack(alignment: .leading) {
                                     HStack {
                                         Text(i.atmKind)
@@ -72,4 +62,4 @@ struct CardView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
-*/
+ */

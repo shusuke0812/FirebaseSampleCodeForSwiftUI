@@ -21,6 +21,7 @@
 		9C4E8E60247A5BE20022BB32 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E5F247A5BE20022BB32 /* SafariView.swift */; };
 		9C4E8E62247A6F040022BB32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */; };
 		9C4E8E65247A974B0022BB32 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E64247A974B0022BB32 /* ViewModel.swift */; };
+		9C7DE086247D576A003BA024 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DE085247D576A003BA024 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9C4E8E5F247A5BE20022BB32 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C4E8E64247A974B0022BB32 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9C7DE085247D576A003BA024 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E1CA6D2A7E4E31B5B31A0B47 /* Pods-FirebaseSampleCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleCode.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseSampleCode/Pods-FirebaseSampleCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				9C4E8E56247A33970022BB32 /* CardView.swift */,
 				9C4E8E5F247A5BE20022BB32 /* SafariView.swift */,
+				9C7DE085247D576A003BA024 /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				9C4E8E5A247A573B0022BB32 /* MapView.swift in Sources */,
 				9C4E8E60247A5BE20022BB32 /* SafariView.swift in Sources */,
 				9C4E8E5C247A574A0022BB32 /* HomeView.swift in Sources */,
+				9C7DE086247D576A003BA024 /* ImagePicker.swift in Sources */,
 				9C4E8E57247A33970022BB32 /* CardView.swift in Sources */,
 				9C3C53862479FB7C00361581 /* ListView.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import SwiftUI
 import FirebaseFirestore
 
 struct Atm: Identifiable {
-    // let id: UUID = UUID()
+    // let id: String = UUID().uuidString
     let id: String
     let iconImage: String
     let atmKind: String
@@ -22,6 +22,30 @@ struct Atm: Identifiable {
 class getAtmData: ObservableObject {
     @Published var datas = [Atm]()
     
+    private var db = Firestore.firestore()
+    
+    func fetchData() {
+        db.collection("atms").addSnapshotListener{( querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            
+            self.datas = documents.map{ querySnapshot -> Atm in
+                let data = querySnapshot.data()
+                let id = querySnapshot.documentID
+                let iconImage = data["iconImage"] as? String ?? ""
+                let atmKind = data["atmKind"] as? String ?? ""
+                let atmName = data["atmName"] as? String ?? ""
+                let atmAddress = data["atmAddress"] as? String ?? ""
+                let favorite = data["favorite"] as? Bool ?? false
+                
+                return Atm(id: id, iconImage: iconImage, atmKind: atmKind, atmName: atmName, atmAddress: atmAddress, favorite: favorite)
+            }
+        }
+    }
+    
+    /*
     init() {
         let db = Firestore.firestore()
         
@@ -43,4 +67,5 @@ class getAtmData: ObservableObject {
             }
         }
     }
+    */
 }

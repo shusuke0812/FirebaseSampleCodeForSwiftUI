@@ -52,6 +52,9 @@ struct CardView: View {
                 }
             }
         }
+        .onAppear() {
+            self.atms.fetchData()
+        }
     }
 }
 

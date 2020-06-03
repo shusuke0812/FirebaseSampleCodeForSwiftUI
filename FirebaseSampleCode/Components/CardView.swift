@@ -22,9 +22,9 @@ struct CardView: View {
     
     var body: some View {
         VStack {
-            if self.atms.datas.count != 0 {
+            if atms.datas.count != 0 {
                 ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(self.atms.datas) {i in
+                        ForEach(atms.datas) {i in
                             HStack {
                                 AnimatedImage(url: URL(string: i.iconImage)!)
                                     .renderingMode(.original)

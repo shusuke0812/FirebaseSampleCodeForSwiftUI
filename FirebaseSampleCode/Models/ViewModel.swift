@@ -49,13 +49,25 @@ class getAtmData: ObservableObject {
     
     init() {
         let db = Firestore.firestore()
-        
+    
         db.collection("atms").addSnapshotListener {(snap, err) in
             if err != nil {
                 print((err?.localizedDescription)!)
                 return
             }
             
+            for i in snap!.documents {
+                let id = i.documentID
+                let iconImage = i.get("iconImage") as! String
+                let atmKind = i.get("atmKind") as! String
+                let atmName = i.get("atmName") as! String
+                let atmAddress = i.get("atmAddress") as! String
+                let favorite = i.get("favorite") as! Bool
+                
+                self.datas.append(Atm(id: id, iconImage: iconImage, atmKind: atmKind, atmName: atmName, atmAddress: atmAddress, favorite: favorite))
+            }
+            
+            /*
             for i in snap!.documentChanges {
                 let id = i.document.documentID
                 let iconImage = i.document.get("iconImage") as! String
@@ -66,6 +78,7 @@ class getAtmData: ObservableObject {
                 
                 self.datas.append(Atm(id: id, iconImage: iconImage, atmKind: atmKind, atmName: atmName, atmAddress: atmAddress, favorite: favorite))
             }
+            */
         }
     }
 }

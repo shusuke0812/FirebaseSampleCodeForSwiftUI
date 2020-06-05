@@ -21,7 +21,7 @@ struct HomeView: View {
             FormView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "wrench")
+                        Image(systemName: "square.and.pencil")
                         Text("投稿")
                     }
             }.tag(2)

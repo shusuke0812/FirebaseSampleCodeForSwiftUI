@@ -24,8 +24,7 @@ class getAtmData: ObservableObject {
     
     private var db = Firestore.firestore()
     
-    /*
-    func fetchData() {
+    func readData() {
         db.collection("atms").addSnapshotListener{( querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
@@ -45,8 +44,8 @@ class getAtmData: ObservableObject {
             }
         }
     }
-    */
     
+    /*
     init() {
         let db = Firestore.firestore()
     
@@ -81,4 +80,5 @@ class getAtmData: ObservableObject {
             */
         }
     }
+    */
 }

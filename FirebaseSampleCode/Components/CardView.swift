@@ -22,35 +22,38 @@ struct CardView: View {
     
     var body: some View {
         VStack {
-            if atms.datas.count != 0 {
-                ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(atms.datas) {i in
-                            HStack {
-                                AnimatedImage(url: URL(string: i.iconImage)!)
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 60, height: 60)
-                                    .clipShape(Circle())
-                                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                                    .shadow(color: .gray, radius: 1, x:0, y:0)
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        Text(i.atmKind)
-                                        Spacer()
-                                        Image(systemName: "heart")
-                                            .padding(.trailing, 10)
-                                    }
-                                    Text(i.atmName)
-                                    Text(i.atmAddress)
-                                }
-                            }
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
-                            .frame(minWidth: 150, minHeight: 180)
-                            .padding()
+            List(atms.datas) {i in
+                HStack {
+                    AnimatedImage(url: URL(string: i.iconImage)!)
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 60, height: 60)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                        .shadow(color: .gray, radius: 1, x:0, y:0)
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(i.atmKind)
+                            Spacer()
+                            Image(systemName: "heart")
+                                .padding(.trailing, 10)
                         }
+                        Text(i.atmName)
+                        Text(i.atmAddress)
+                    }
                 }
+                // カード型のUIに枠線を追加する
+                //.overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                //.frame(minWidth: 150, minHeight: 180)
+                //.padding()
             }
+        }
+        .onAppear() {
+            self.atms.readData()
+            
+            // ListViewの区切り線を消す
+            // UITableView.appearance().separatorStyle = .none
         }
     }
 }
@@ -62,4 +65,4 @@ struct CardView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
- */
+*/

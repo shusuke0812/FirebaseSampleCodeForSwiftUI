@@ -12,13 +12,8 @@ import SDWebImageSwiftUI
 struct CardView: View {
     
     @ObservedObject var atms = getAtmData()
-    /*
-    let atm: Atm
-    
-    init(atm: Atm) {
-        self.atm = atm
-    }
-     */
+   
+    // @State var favorite = false
     
     var body: some View {
         VStack {
@@ -36,8 +31,21 @@ struct CardView: View {
                         HStack {
                             Text(i.atmKind)
                             Spacer()
-                            Image(systemName: "heart")
-                                .padding(.trailing, 10)
+                            if i.favorite {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(.pink)
+                                    .padding(.trailing, 10)
+                                    .onTapGesture {
+                                        // self.favorite.toggle()
+                                    }
+                            } else {
+                                Image(systemName: "heart")
+                                    .padding(.trailing, 10)
+                                    .onTapGesture {
+                                        // self.favorite.toggle()
+                                    }
+                            }
+                            
                         }
                         Text(i.atmName)
                         Text(i.atmAddress)

@@ -45,6 +45,16 @@ class getAtmData: ObservableObject {
         }
     }
     
+    func updateData(id: String, favorite: Bool) {
+        db.collection("atms").document(id).updateData(["favorite": favorite]) { error in
+            
+            if error != nil {
+                print((error?.localizedDescription)!)
+                return
+            }
+        }
+    }
+    
     /*
     init() {
         let db = Firestore.firestore()

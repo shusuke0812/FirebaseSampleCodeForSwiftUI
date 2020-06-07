@@ -36,13 +36,13 @@ struct CardView: View {
                                     .foregroundColor(.pink)
                                     .padding(.trailing, 10)
                                     .onTapGesture {
-                                        // self.favorite.toggle()
+                                        self.atms.updateData(id: i.id, favorite: false)
                                     }
                             } else {
                                 Image(systemName: "heart")
                                     .padding(.trailing, 10)
                                     .onTapGesture {
-                                        // self.favorite.toggle()
+                                        self.atms.updateData(id: i.id, favorite: true)
                                     }
                             }
                             

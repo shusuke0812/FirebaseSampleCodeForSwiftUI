@@ -24,16 +24,18 @@ struct FormView: View {
                 .font(.headline)
                 .fontWeight(.bold)
             NavigationView {
-                Form {
+                //Form {
                     Section {
                         Picker(selection: $atmIndex, label: Text("ATM種別")) {
                             ForEach(0 ..< atms.count) {
                                 Text(self.atms[$0]).tag($0)
                             }
-                        }
-                    }
+                      }
+                  //}
                 }
             }
+            .padding()
+            /*
             HStack {
                 Text("名前")
                 TextField("ATMの支店名を入力", text: $textAtmName, onCommit: {
@@ -54,18 +56,13 @@ struct FormView: View {
                     .keyboardType(.asciiCapable)
             }
             .padding()
-            Spacer()
             VStack {
-                Spacer()
                 Text("画像がありません")
                     .foregroundColor(.gray)
-                    .frame(width: 200, height: 200)
+                    .frame(width: 150, height: 150)
                     .overlay(Rectangle().stroke(Color.gray, lineWidth: 0.5))
                     .padding()
-                Spacer()
             }
-            
-            
             Button(action: {
                 
             }){
@@ -79,7 +76,6 @@ struct FormView: View {
                 .frame(width: 80, height: 60)
                 .padding(.bottom, 30)
             }
-            Spacer()
             Button(action: {
                 // print("ボタンがタップされました")
                 self.isPresented.toggle()
@@ -88,7 +84,7 @@ struct FormView: View {
             }.sheet(isPresented: $isPresented) {
                 SafariView(url: URL(string: self.url)!)
             }
-            Spacer()
+            */
         }
     }
 }

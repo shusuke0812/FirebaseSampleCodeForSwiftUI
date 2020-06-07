@@ -7,54 +7,102 @@
 //
 
 import SwiftUI
+import Firebase
 import SDWebImageSwiftUI
 
 struct CardView: View {
     
     @ObservedObject var atms = getAtmData()
+    @Binding var searchedText: String
    
     // @State var favorite = false
     
     var body: some View {
         VStack {
-            List(atms.datas) {i in
-                HStack {
-                    AnimatedImage(url: URL(string: i.iconImage)!)
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 60, height: 60)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                        .shadow(color: .gray, radius: 1, x:0, y:0)
-                    VStack(alignment: .leading) {
+            if self.searchedText != "" {
+                if self.atms.datas.filter({$0.atmKind.lowercased().contains(self.searchedText.lowercased())}).count == 0 {
+                    Text("該当するATMが見つかりませんでした")
+                } else {
+                    List(atms.datas.filter{$0.atmKind.lowercased().contains(self.searchedText.lowercased())}) {i in
                         HStack {
-                            Text(i.atmKind)
-                            Spacer()
-                            if i.favorite {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.pink)
-                                    .padding(.trailing, 10)
-                                    .onTapGesture {
-                                        self.atms.updateData(id: i.id, favorite: false)
+                            AnimatedImage(url: URL(string: i.iconImage)!)
+                                .renderingMode(.original)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 60, height: 60)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                                .shadow(color: .gray, radius: 1, x:0, y:0)
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text(i.atmKind)
+                                    Spacer()
+                                    if i.favorite {
+                                        Image(systemName: "heart.fill")
+                                            .foregroundColor(.pink)
+                                            .padding(.trailing, 10)
+                                            .onTapGesture {
+                                                self.atms.updateData(id: i.id, favorite: false)
+                                            }
+                                    } else {
+                                        Image(systemName: "heart")
+                                            .padding(.trailing, 10)
+                                            .onTapGesture {
+                                                self.atms.updateData(id: i.id, favorite: true)
+                                            }
                                     }
-                            } else {
-                                Image(systemName: "heart")
-                                    .padding(.trailing, 10)
-                                    .onTapGesture {
-                                        self.atms.updateData(id: i.id, favorite: true)
-                                    }
+                                    
+                                }
+                                Text(i.atmName)
+                                Text(i.atmAddress)
                             }
-                            
                         }
-                        Text(i.atmName)
-                        Text(i.atmAddress)
+                        // カード型のUIに枠線を追加する
+                        //.overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                        //.frame(minWidth: 150, minHeight: 180)
+                        //.padding()
                     }
                 }
-                // カード型のUIに枠線を追加する
-                //.overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
-                //.frame(minWidth: 150, minHeight: 180)
-                //.padding()
+            } else {
+                List(atms.datas) {i in
+                    HStack {
+                        AnimatedImage(url: URL(string: i.iconImage)!)
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 60)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                            .shadow(color: .gray, radius: 1, x:0, y:0)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(i.atmKind)
+                                Spacer()
+                                if i.favorite {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(.pink)
+                                        .padding(.trailing, 10)
+                                        .onTapGesture {
+                                            self.atms.updateData(id: i.id, favorite: false)
+                                        }
+                                } else {
+                                    Image(systemName: "heart")
+                                        .padding(.trailing, 10)
+                                        .onTapGesture {
+                                            self.atms.updateData(id: i.id, favorite: true)
+                                        }
+                                }
+                                
+                            }
+                            Text(i.atmName)
+                            Text(i.atmAddress)
+                        }
+                    }
+                    // カード型のUIに枠線を追加する
+                    //.overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                    //.frame(minWidth: 150, minHeight: 180)
+                    //.padding()
+                }
             }
         }
         .onAppear() {

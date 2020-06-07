@@ -14,17 +14,25 @@ struct ListView: View {
     
     var body: some View {
         NavigationView {
-            CardView()
+            CardView(searchedText: $text)
                 .padding()
                 .navigationBarTitle("", displayMode: .inline)
-                .navigationBarItems(leading: HStack {
-                    TextField("検索キーワードを入力", text: $text, onCommit: {
-                        // 編集完了後に呼ばれるクロージャー
-                        print("テキスト入力")
-                    })
+                .navigationBarItems(leading: ZStack {
+                    TextField("検索キーワードを入力", text: self.$text)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.asciiCapable)
+                        //.keyboardType(.asciiCapable)
                         .frame(width: UIScreen.main.bounds.width - 40)
+                    /* TODO:入力キャンセルボタン実装
+                    if self.text != "" {
+                        Button(action: {
+                            self.text = ""
+                        }) {
+                            Image(systemName: "multiply.circle")
+                                .frame(width: UIScreen.main.bounds.width - 40, alignment: .trailing)
+                                .padding(.trailing, 15)
+                        }
+                    }
+                    */
                 })
         }
     }

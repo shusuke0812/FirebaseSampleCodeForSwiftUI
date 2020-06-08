@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DD54AE438BEDD3F8C5F732D /* Pods_FirebaseSampleCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF51DB0A5D5F23081C793E9 /* Pods_FirebaseSampleCode.framework */; };
+		9C03D143248E7F6000919249 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03D142248E7F6000919249 /* MapKit.swift */; };
 		9C3C53822479FB7C00361581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C53812479FB7C00361581 /* AppDelegate.swift */; };
 		9C3C53842479FB7C00361581 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C53832479FB7C00361581 /* SceneDelegate.swift */; };
 		9C3C53862479FB7C00361581 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C53852479FB7C00361581 /* ListView.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		4DF51DB0A5D5F23081C793E9 /* Pods_FirebaseSampleCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSampleCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81ED71CE838F0640B67B6AAE /* Pods-FirebaseSampleCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleCode.release.xcconfig"; path = "Target Support Files/Pods-FirebaseSampleCode/Pods-FirebaseSampleCode.release.xcconfig"; sourceTree = "<group>"; };
+		9C03D142248E7F6000919249 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 		9C3C537E2479FB7C00361581 /* FirebaseSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3C53812479FB7C00361581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3C53832479FB7C00361581 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,9 +100,9 @@
 			children = (
 				9C4E8E58247A3DF00022BB32 /* Pages */,
 				9C4E8E55247A33840022BB32 /* Components */,
-				9C3C53812479FB7C00361581 /* AppDelegate.swift */,
 				9C4E8E63247A97330022BB32 /* Models */,
 				9C3C53832479FB7C00361581 /* SceneDelegate.swift */,
+				9C3C53812479FB7C00361581 /* AppDelegate.swift */,
 				9C3C53872479FB8200361581 /* Assets.xcassets */,
 				9C3C538C2479FB8200361581 /* LaunchScreen.storyboard */,
 				9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */,
@@ -124,6 +126,7 @@
 				9C4E8E56247A33970022BB32 /* CardView.swift */,
 				9C4E8E5F247A5BE20022BB32 /* SafariView.swift */,
 				9C7DE085247D576A003BA024 /* ImagePicker.swift */,
+				9C03D142248E7F6000919249 /* MapKit.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				9C3C53842479FB7C00361581 /* SceneDelegate.swift in Sources */,
 				9C4E8E5E247A581C0022BB32 /* FormView.swift in Sources */,
 				9C4E8E5A247A573B0022BB32 /* MapView.swift in Sources */,
+				9C03D143248E7F6000919249 /* MapKit.swift in Sources */,
 				9C4E8E60247A5BE20022BB32 /* SafariView.swift in Sources */,
 				9C4E8E5C247A574A0022BB32 /* HomeView.swift in Sources */,
 				9C7DE086247D576A003BA024 /* ImagePicker.swift in Sources */,

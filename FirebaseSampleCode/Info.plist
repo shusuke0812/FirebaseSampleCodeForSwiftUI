@@ -58,5 +58,9 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>地図上に現在地を表示します</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>地図上に現在地を表示します</string>
 </dict>
 </plist>

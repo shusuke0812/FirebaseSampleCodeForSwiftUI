@@ -16,7 +16,7 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             CardView(searchedText: $text, listView: $listView)
-                .padding()
+                // .padding()
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarItems(leading: ZStack {
                     TextField("検索キーワードを入力", text: self.$text)

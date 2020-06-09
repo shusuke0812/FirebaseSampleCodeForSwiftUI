@@ -15,7 +15,7 @@ struct CardView: View {
     @ObservedObject var atms = getAtmData()
     
     @Binding var searchedText: String
-    // @Binding var listView: Bool
+    @Binding var listView: Bool
    
     // @State var favorite = false
     
@@ -117,7 +117,7 @@ struct CardView: View {
                 // UITableView.appearance().separatorStyle = .none
             }
             Button(action: {
-                // self.listView.toggle()
+                self.listView.toggle()
             }) {
                 Text("地図表示")
                     .foregroundColor(.blue)

@@ -11,10 +11,11 @@ import SwiftUI
 struct ListView: View {
     
     @State private var text = ""
+    @Binding var listView: Bool
     
     var body: some View {
         NavigationView {
-            CardView(searchedText: $text)
+            CardView(searchedText: $text, listView: $listView)
                 .padding()
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarItems(leading: ZStack {
@@ -38,8 +39,11 @@ struct ListView: View {
     }
 }
 
-struct ListView_Previews: PreviewProvider {
+/*
+struct ListView_Previews: PreviewProvider
+    
     static var previews: some View {
         ListView()
     }
 }
+*/

@@ -24,7 +24,9 @@ struct CardView: View {
             VStack {
                 if self.searchedText != "" {
                     if self.atms.datas.filter({$0.atmKind.lowercased().contains(self.searchedText.lowercased())}).count == 0 {
-                        Text("該当するATMが見つかりませんでした")
+                        List {
+                            Text("該当するATMが見つかりませんでした")
+                        }
                     } else {
                         List(atms.datas.filter{$0.atmKind.lowercased().contains(self.searchedText.lowercased())}) {i in
                             HStack {

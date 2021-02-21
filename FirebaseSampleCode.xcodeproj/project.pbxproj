@@ -20,8 +20,8 @@
 		9C4E8E5C247A574A0022BB32 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E5B247A574A0022BB32 /* HomeView.swift */; };
 		9C4E8E5E247A581C0022BB32 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E5D247A581C0022BB32 /* FormView.swift */; };
 		9C4E8E60247A5BE20022BB32 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E5F247A5BE20022BB32 /* SafariView.swift */; };
-		9C4E8E62247A6F040022BB32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */; };
 		9C4E8E65247A974B0022BB32 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E8E64247A974B0022BB32 /* ViewModel.swift */; };
+		9C596C6225E1F921009DF2E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C596C6125E1F921009DF2E9 /* GoogleService-Info.plist */; };
 		9C7DE086247D576A003BA024 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DE085247D576A003BA024 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		9C4E8E5B247A574A0022BB32 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9C4E8E5D247A581C0022BB32 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		9C4E8E5F247A5BE20022BB32 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C4E8E64247A974B0022BB32 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9C596C6125E1F921009DF2E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C7DE085247D576A003BA024 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E1CA6D2A7E4E31B5B31A0B47 /* Pods-FirebaseSampleCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleCode.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseSampleCode/Pods-FirebaseSampleCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,14 +98,17 @@
 		9C3C53802479FB7C00361581 /* FirebaseSampleCode */ = {
 			isa = PBXGroup;
 			children = (
-				9C4E8E58247A3DF00022BB32 /* Pages */,
-				9C4E8E55247A33840022BB32 /* Components */,
+				9C596C6A25E1FA75009DF2E9 /* Entity */,
+				9C596C6925E1FA6A009DF2E9 /* Repository */,
+				9C596C6825E1FA62009DF2E9 /* ViewModel */,
+				9C596C6525E1FA0D009DF2E9 /* View */,
 				9C4E8E63247A97330022BB32 /* Models */,
 				9C3C53832479FB7C00361581 /* SceneDelegate.swift */,
 				9C3C53812479FB7C00361581 /* AppDelegate.swift */,
+				9C4E8E64247A974B0022BB32 /* ViewModel.swift */,
 				9C3C53872479FB8200361581 /* Assets.xcassets */,
 				9C3C538C2479FB8200361581 /* LaunchScreen.storyboard */,
-				9C4E8E61247A6F040022BB32 /* GoogleService-Info.plist */,
+				9C596C6125E1F921009DF2E9 /* GoogleService-Info.plist */,
 				9C3C538F2479FB8200361581 /* Info.plist */,
 				9C3C53892479FB8200361581 /* Preview Content */,
 			);
@@ -120,18 +123,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9C4E8E55247A33840022BB32 /* Components */ = {
+		9C4E8E63247A97330022BB32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9C4E8E56247A33970022BB32 /* CardView.swift */,
-				9C4E8E5F247A5BE20022BB32 /* SafariView.swift */,
-				9C7DE085247D576A003BA024 /* ImagePicker.swift */,
-				9C03D142248E7F6000919249 /* MapKit.swift */,
 			);
-			path = Components;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		9C4E8E58247A3DF00022BB32 /* Pages */ = {
+		9C596C6525E1FA0D009DF2E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C596C6625E1FA12009DF2E9 /* BaseView */,
+				9C596C6725E1FA19009DF2E9 /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C596C6625E1FA12009DF2E9 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
 				9C4E8E5B247A574A0022BB32 /* HomeView.swift */,
@@ -139,15 +147,39 @@
 				9C4E8E59247A573B0022BB32 /* MapView.swift */,
 				9C4E8E5D247A581C0022BB32 /* FormView.swift */,
 			);
-			path = Pages;
+			path = BaseView;
 			sourceTree = "<group>";
 		};
-		9C4E8E63247A97330022BB32 /* Models */ = {
+		9C596C6725E1FA19009DF2E9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				9C4E8E64247A974B0022BB32 /* ViewModel.swift */,
+				9C4E8E56247A33970022BB32 /* CardView.swift */,
+				9C4E8E5F247A5BE20022BB32 /* SafariView.swift */,
+				9C7DE085247D576A003BA024 /* ImagePicker.swift */,
+				9C03D142248E7F6000919249 /* MapKit.swift */,
 			);
-			path = Models;
+			path = Component;
+			sourceTree = "<group>";
+		};
+		9C596C6825E1FA62009DF2E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C596C6925E1FA6A009DF2E9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9C596C6A25E1FA75009DF2E9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C3C538E2479FB8200361581 /* LaunchScreen.storyboard in Resources */,
-				9C4E8E62247A6F040022BB32 /* GoogleService-Info.plist in Resources */,
+				9C596C6225E1F921009DF2E9 /* GoogleService-Info.plist in Resources */,
 				9C3C538B2479FB8200361581 /* Preview Assets.xcassets in Resources */,
 				9C3C53882479FB8200361581 /* Assets.xcassets in Resources */,
 			);
